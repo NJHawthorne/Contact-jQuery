@@ -37,5 +37,13 @@ body {
       transition: background-color 500ms; }
     body form button:hover {
       background-color: #88C470; }
+  body .successSection {
+    margin: 5em auto 0 auto;
+    width: 30em;
+    background-color: #fff;
+    display: none; }
+    body .successSection h3 {
+      font-size: 1em;
+      padding: 2.5em 1em; }
 
 /*# sourceMappingURL=main.css.map */
