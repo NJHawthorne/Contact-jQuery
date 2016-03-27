@@ -1,0 +1,41 @@
+body {
+  background-image: url(https://raw.githubusercontent.com/TIY-Austin-Front-End-Engineering/jquery-contact-form/master/bg.jpg);
+  background-size: fill; }
+  body form {
+    background-color: #fff;
+    margin: 5em auto;
+    width: 30em; }
+    body form h2 {
+      margin-left: 1em;
+      padding-top: 1.5em; }
+    body form .inputDesc {
+      margin: 0.3em 0 0.3em 1.6em; }
+    body form .errorMessage {
+      margin: 0.3em 0 0.3em 1.6em; }
+    body form .inputSection {
+      display: inline-block;
+      margin: 0.3em 0 0em 1.6em; }
+      body form .inputSection .colorBars {
+        background-color: #000;
+        height: 1.5em;
+        width: 0.25em;
+        float: left; }
+      body form .inputSection .messageBar {
+        height: 11.4em; }
+      body form .inputSection input {
+        margin-left: 0em;
+        width: 26em; }
+      body form .inputSection .inputMessage {
+        padding-bottom: 10em; }
+    body form button {
+      margin: 0.5em 0 1.6em 1.6em;
+      padding: 1.5em 3em;
+      background-color: #1D1E2E;
+      color: #fff;
+      font-weight: 200;
+      border: none;
+      transition: background-color 500ms; }
+    body form button:hover {
+      background-color: #88C470; }
+
+/*# sourceMappingURL=main.css.map */
