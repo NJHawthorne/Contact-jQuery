@@ -1,33 +1,36 @@
 body {
   background-image: url(https://raw.githubusercontent.com/TIY-Austin-Front-End-Engineering/jquery-contact-form/master/bg.jpg);
   background-size: fill; }
-  body form {
+  body .contactSection {
     background-color: #fff;
     margin: 5em auto;
     width: 30em; }
-    body form h2 {
+    body .contactSection .errorMessage {
+      color: red;
+      margin: 1em 0; }
+    body .contactSection h2 {
       margin-left: 1em;
       padding-top: 1.5em; }
-    body form .inputDesc {
-      margin: 0.3em 0 0.3em 1.6em; }
-    body form .errorMessage {
-      margin: 0.3em 0 0.3em 1.6em; }
-    body form .inputSection {
+    body .contactSection .inputDesc {
+      margin: 0.3em 0 0 1.6em; }
+    body .contactSection .errorMessage {
+      margin-left: 1.6em; }
+    body .contactSection .inputSection {
       display: inline-block;
-      margin: 0.3em 0 0em 1.6em; }
-      body form .inputSection .colorBars {
+      margin: 0.3em 0 0 1.6em; }
+      body .contactSection .inputSection .colorBars {
         background-color: #000;
         height: 1.5em;
         width: 0.25em;
         float: left; }
-      body form .inputSection .messageBar {
+      body .contactSection .inputSection .messageBar {
         height: 11.4em; }
-      body form .inputSection input {
+      body .contactSection .inputSection input {
         margin-left: 0em;
         width: 26em; }
-      body form .inputSection .inputMessage {
+      body .contactSection .inputSection .inputMessage {
         padding-bottom: 10em; }
-    body form button {
+    body .contactSection button {
       margin: 0.5em 0 1.6em 1.6em;
       padding: 1.5em 3em;
       background-color: #1D1E2E;
@@ -35,13 +38,12 @@ body {
       font-weight: 200;
       border: none;
       transition: background-color 500ms; }
-    body form button:hover {
+    body .contactSection button:hover {
       background-color: #88C470; }
   body .successSection {
     margin: 5em auto 0 auto;
     width: 30em;
-    background-color: #fff;
-    display: none; }
+    background-color: #fff; }
     body .successSection h3 {
       font-size: 1em;
       padding: 2.5em 1em; }
