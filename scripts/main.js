@@ -5,7 +5,7 @@ $('button').on('click', function(e) {
 	//Creating the input variables so I have something nice to work with later
 	var inputName = $('.inputName'), inputEmail = $('.inputEmail'), inputSite = $('.inputSite'), inputMessage = $('.inputMessage');
 	//Creating the input error variables so I have something nice to work with later
-	var errorName = $('.errorName'), errorEmail = $('.errorEmail'), errorSite = $('.errorSite'), errorMessage = $('.errorMessage');
+	var errorName = $('.errorName'), errorEmail = $('.errorEmail'), errorSite = $('.errorSite'), errorMessage = $('.errorMessageSection');
 	//Creating variables for the colored bars. Again, something nice for later, and I'm too lazy to change the bar class' format to match the others. Bet you didn't even notice until I said something. Heh heh heh.
 	var barName = $('.nameBar'), barEmail = $('.emailBar'), barSite = $('.siteBar'), barMessage = $('.messageBar');
 	//Creating a set of variables to determine if the information inputted is valid or not
@@ -16,7 +16,7 @@ $('button').on('click', function(e) {
 
 	if(!inputName.val()) {
 		errorName.show();
-		errorName.html('Please enter a valid name');
+		errorName.html('Name cannot be left empty');
 		barName.css('background-color', 'red');
 		console.log('Valid Name: '+validName);
 	} else {
@@ -27,9 +27,14 @@ $('button').on('click', function(e) {
 	}
 
 
-	if(!inputEmail.val() || !inputEmail.val().split('').includes('@')) {
+	if(!inputEmail.val()) {
 		errorEmail.show();
-		errorEmail.html('Please enter a valid email');
+		errorEmail.html('Email cannot be left empty');
+		barEmail.css('background-color', 'red');
+		console.log('Valid Email: '+validEmail);
+	} else if (!inputEmail.val().split('').includes('@')) {
+		errorEmail.show();
+		errorEmail.html("Email must contain an '@'");
 		barEmail.css('background-color', 'red');
 		console.log('Valid Email: '+validEmail);
 	} else {
@@ -40,9 +45,14 @@ $('button').on('click', function(e) {
 	}
 
 
-	if(!inputSite.val() || inputSite.val().substr(0, 7) !== 'http://') {
+	if(!inputSite.val()) {
 		errorSite.show();
-		errorSite.html('Please enter a valid website');
+		errorSite.html('Website cannot be left empty');
+		barSite.css('background-color', 'red');
+		console.log('Valid Site: '+validSite);
+	} else if (inputSite.val().substr(0, 7) !== 'http://') {
+		errorSite.show();
+		errorSite.html("Website must start with http://");
 		barSite.css('background-color', 'red');
 		console.log('Valid Site: '+validSite);
 	} else {
@@ -55,11 +65,11 @@ $('button').on('click', function(e) {
 
 	if(!inputMessage.val()) {
 		errorMessage.show();
-		errorMessage.html('Please enter a valid message');
+		errorMessage.html('Message cannot be left empty');
 		barMessage.css('background-color', 'red');
 		console.log('Valid Message: '+validMessage);
 	} else {
-		errorMessage.hide;
+		errorMessage.hide();
 		barMessage.css('background-color', 'green');
 		validMessage = true;
 		console.log('Valid Message: '+validMessage);
